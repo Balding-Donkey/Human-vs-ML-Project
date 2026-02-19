@@ -18,22 +18,20 @@ You may work alone or with a partner. You may choose to work with the provided P
 ---
 
 **Team Members:**  
-- Name 1  
-- Name 2 (if applicable)  
+- Noah Kent
 
 **Dataset Used:**  
-(e.g. Penguins, Iris, Titanic, etc.)
+Hawks
 
 **Source:**  
-(UCI / Kaggle / Provided dataset)
+Kaggle
 
-**Target Variable (What we are predicting):**  
-(e.g. species, survival, diagnosis)
+**Target Variable (What I am predicting):**  
+Species
 
 **Features Used:**  
-- Feature 1  
-- Feature 2  
-- Feature 3
+- Hallux
+- Weight
 
 **[Video Review](https://)**
 
@@ -41,14 +39,19 @@ You may work alone or with a partner. You may choose to work with the provided P
 
 ### Pseudo-Code
 ```text
-Write your human decision rules here.
+if hallux < 16 or hallux > 50
+    predict sharpshinned
+else if weight > 620 or hallux > 27
+    predict redtailed
+else
+    predict coopers
 ```
 
-When examining the data and visualizations, we focused on the features ___ and ___ because ___.
+When examining the data and visualizations, I focused on hallux and weight because they divided the data the best.
 
-The plots/tables suggested a possible threshold for ___, and we considered values above or below this point to see how they might relate to ___.
+The plots/tables suggested a possible threshold for ___, and I considered values above or below this point to see how they might relate to ___.
 
-From the summary tables and visualizations, it appeared that ___ could influence classification, which led us to ___ in our decision rules.
+From the summary tables and visualizations, it appeared that ___ could influence classification, which led us to ___ in my decision rules.
 
 ### Confusion Matrix
 
