@@ -37,6 +37,11 @@ Species
 
 ## Human Algorithm
 
+<img src="getting_started/plots/Hallux_Weight.png" alt="Hallux vs Weight – Hawks Dataset" width="400">
+<img src="getting_started/plots/Tail_Hallux.png" alt="Tail vs Hallux – Hawks Dataset" width="400">
+<img src="getting_started/plots/Wing_Weight.png" alt="Wing vs Weight – Hawks Dataset" width="400">
+
+
 ### Pseudo-Code
 ```text
 if hallux < 16 or hallux > 50
@@ -49,9 +54,9 @@ else
 
 When examining the data and visualizations, I focused on hallux and weight because they divided the data the best.
 
-The plots/tables suggested a possible threshold for ___, and I considered values above or below this point to see how they might relate to ___.
+The plots/tables suggested a possible threshold for weight at 620, and I considered values above or below this point to see how they might relate to species.
 
-From the summary tables and visualizations, it appeared that ___ could influence classification, which led us to ___ in my decision rules.
+From the summary tables and visualizations, it appeared that hallux could influence classification, which led me to include it in my decision rules.
 
 ### Confusion Matrix
 
