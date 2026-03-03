@@ -56,7 +56,7 @@ When examining the data and visualizations, I focused on hallux because it divid
 
 The plots/tables suggested a possible threshold for hallux at 17, and I considered values above or below this point to see how they might relate to species.
 
-From the summary tables and visualizations, it appeared that hallux could influence classification, which led me to include it in my decision rules.
+From the summary tables and visualizations, it appeared that hallux could influence classification, so I used it for my classification.
 
 ### Confusion Matrix
 
@@ -68,35 +68,35 @@ Accuracy: 99.26%
 | RT | 1 | 94 | 0 |
 | SS | 0 | 0 | 31 |
 
-One example where our algorithm worked well is when the inputs were ___, leading to a correct prediction of ___ because ___.
+My algorithm worked almost perfectly. This came down to chance, since in the training data there were more outliers compared to how many there were in the test data.
 
-An example where the algorithm did not perform as expected is when the inputs were ___, resulting in a prediction of ___ instead of ___, which may have happened because ___.
+The algorithm did not perform as expected when the input was on the line between two regions, resulting in a prediction of coopers instead of red tailed, which may have happened because that one was an outlier.
 
-These examples of success and failure highlight patterns in the data or limitations in our rules, such as ___.
+These examples of success and failure highlight patterns in the data or limitations in our rules, such as how the hallux was a very good indicator of species.
 
-<img width="315" height="334" alt="image" src="https://github.com/user-attachments/assets/23ee1e49-da76-47c2-97b8-c8fbcbef179c" />
+<img width="400" alt="image" src="/workspaces/Human-vs-ML-Project/human_algorithm/plots/human_algorithm_results.png" />
 
 ## Machine Learning Model
 
-We chose a value of k = ___ after comparing model performance across different values of k and observing that ___.
+I chose a value of k = 1 after comparing model performance across different values of k and observing that the results were the same for every k value except 2.
 
-When analyzing the outputs and metrics, we noticed that changing k affected ___, which influenced our final choice.
+When analyzing the outputs and metrics, I noticed that changing k affected whether a specific hawk was marked correctly, which influenced my final choice.
 
-Based on the results shown in the tables or visualizations, k = ___ best matched our goals for model performance because ___.
+Based on the results shown in the tables or visualizations, k = 1 best matched my goals for model performance because it had the highest accuracy.
 
 ### Confusion Matrix
 
-Accuracy: ?
+Accuracy: 97.04%
 
-| Actual \ Predicted | Class 1 | Class 2 | Class 3 |
-|-------------------|---------|---------|---------|
-| **Class 1**       |         |         |         |
-| **Class 2**       |         |         |         |
-| **Class 3**       |         |         |         |
+| Actual \ Predicted | CH | RT | SS |
+|----|---|---|---|           
+| CH | 7 | 1 | 2 |
+| RT | 0 | 85 | 1 |
+| SS | 0 | 0 | 39 |
 
 The table/visualization shows a clear pattern where the model predicts ___ when ___, indicating a strong relationship between these features.
 
-The confusion matrix reveals that the model most often confuses ___ with ___, suggesting these classes have similar feature values.
+The confusion matrix reveals that the model most often confuses coopers hawks, suggesting this class may not follow patterns as strongly.
 
 Compared to the human algorithm, the KNN model shows different behavior when ___, as seen in the ___ visualization.
 

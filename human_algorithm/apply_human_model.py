@@ -20,8 +20,26 @@ conf_matrix = pd.crosstab(
 print(conf_matrix)
 print(f'Accuracy of the human model: {accuracy:.2%}')
 
-# plt.scatter(
-#     test_df['Hallux'],
-#     test_df['Weight'],
-#     'correct'
-# )
+wrong_results = test_df[test_df['correct'] == False]
+correct_results = test_df[test_df['correct'] == True]
+
+plt.scatter(
+    correct_results['Hallux'],
+    correct_results['Weight'],
+    c='green',
+    marker='o',
+    label='Correct',
+)
+plt.scatter(
+    wrong_results['Hallux'],
+    wrong_results['Weight'],
+    c='red',
+    marker='x',
+    label='Wrong',
+)
+
+plt.xlabel('Hallux')
+plt.ylabel('Weight')
+plt.title('Human Algorithm Prediction Results')
+plt.legend(title='Prediction Result')
+plt.savefig('human_algorithm/plots/human_algorithm_results.png')
