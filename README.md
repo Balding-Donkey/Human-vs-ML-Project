@@ -44,29 +44,29 @@ Species
 
 ### Pseudo-Code
 ```text
-if hallux < 16 or hallux > 50
+if hallux < 17 or hallux > 50
     predict sharpshinned
-else if weight > 620 or hallux > 27
+else if hallux > 26
     predict redtailed
 else
     predict coopers
 ```
 
-When examining the data and visualizations, I focused on hallux and weight because they divided the data the best.
+When examining the data and visualizations, I focused on hallux because it divided the data the best.
 
-The plots/tables suggested a possible threshold for weight at 620, and I considered values above or below this point to see how they might relate to species.
+The plots/tables suggested a possible threshold for hallux at 17, and I considered values above or below this point to see how they might relate to species.
 
 From the summary tables and visualizations, it appeared that hallux could influence classification, which led me to include it in my decision rules.
 
 ### Confusion Matrix
 
-Accuracy: ?
+Accuracy: 99.26%
 
-| Actual \ Predicted | Class 1 | Class 2 | Class 3 |
-|-------------------|---------|---------|---------|
-| **Class 1**       |         |         |         |
-| **Class 2**       |         |         |         |
-| **Class 3**       |         |         |         |
+| Actual \ Predicted | CH | RT | SS |
+|----|---|---|---|
+| CH | 9 | 0 | 0 |
+| RT | 1 | 94 | 0 |
+| SS | 0 | 0 | 31 |
 
 One example where our algorithm worked well is when the inputs were ___, leading to a correct prediction of ___ because ___.
 
