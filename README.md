@@ -60,19 +60,19 @@ From the summary tables and visualizations, it appeared that hallux could influe
 
 ### Confusion Matrix
 
-Accuracy: 99.26%
+Accuracy: 97.78%
 
 | Actual \ Predicted | CH | RT | SS |
 |----|---|---|---|
-| CH | 9 | 0 | 0 |
-| RT | 1 | 94 | 0 |
-| SS | 0 | 0 | 31 |
+| CH | 9 | 1 | 0 |
+| RT | 1 | 85 | 0 |
+| SS | 1 | 0 | 38 |
 
-My algorithm worked almost perfectly. This came down to chance, since in the training data there were more outliers compared to how many there were in the test data.
+My algorithm worked very well.
 
-The algorithm did not perform as expected when the input was on the line between two regions, resulting in a prediction of coopers instead of red tailed, which may have happened because that one was an outlier.
+The algorithm did not perform as expected when the input was near the line between two regions.
 
-These examples of success and failure highlight patterns in the data or limitations in our rules, such as how the hallux was a very good indicator of species.
+These examples of success and failure highlight patterns in the data or limitations in my rules, such as how the hallux was a very good indicator of species.
 
 <img width="400" alt="image" src="/workspaces/Human-vs-ML-Project/human_algorithm/plots/human_algorithm_results.png" />
 
@@ -98,6 +98,6 @@ The table/visualization shows a clear pattern where the model predicts ___ when 
 
 The confusion matrix reveals that the model most often confuses coopers hawks, suggesting this class may not follow patterns as strongly.
 
-Compared to the human algorithm, the KNN model shows different behavior when ___, as seen in the ___ visualization.
+Compared to the human algorithm, the KNN model is actually less accurate, but only slightly.
 
-<img width="315" height="334" alt="image" src="https://github.com/user-attachments/assets/199ae59d-3470-40c6-9669-60e62b211619" />
+<img width="400" alt="image" src="/workspaces/Human-vs-ML-Project/ml_model/plots/knn_test_results.png" />

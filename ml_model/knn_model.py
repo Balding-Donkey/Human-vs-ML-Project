@@ -37,31 +37,65 @@ conf_matrix = pd.crosstab(
 print(conf_matrix)
 print(f'Accuracy of the KNN model (k={k}): {accuracy:.2%}')
 
-# y_pred['correct'] = y_pred == y_test
-# pred_wrong = y_pred[y_pred['correct'] == False]
-# pred_correct = y_pred[y_pred['correct'] == True]
 
-# y_test['correct'] = y_pred == y_test
-# pred_wrong = y_pred[y_pred['correct'] == False]
-# pred_correct = y_pred[y_pred['correct'] == True]
+train_df = x_train.copy()
+train_df['species'] = y_train
+train_df['pred'] = y_train_pred
+train_df['correct'] = train_df['pred'] == train_df['species']
+train_pred_wrong = train_df[train_df['correct'] == False]
+train_pred_correct = train_df[train_df['correct'] == True]
 
-# plt.scatter(
-#     correct_results['Hallux'],
-#     correct_results['Weight'],
-#     c='green',
-#     marker='o',
-#     label='Correct',
-# )
-# plt.scatter(
-#     wrong_results['Hallux'],
-#     wrong_results['Weight'],
-#     c='red',
-#     marker='x',
-#     label='Wrong',
-# )
+# Plot the training data
+plt.scatter(
+    train_pred_correct['Hallux'],
+    train_pred_correct['Weight'],
+    c='green',
+    marker='o',
+    label='Correct',
+)
+plt.scatter(
+    train_pred_wrong['Hallux'],
+    train_pred_wrong['Weight'],
+    c='red',
+    marker='x',
+    label='Wrong',
+)
 
-# plt.xlabel('Hallux')
-# plt.ylabel('Weight')
-# plt.title('Human Algorithm Prediction Results')
-# plt.legend(title='Prediction Result')
-# plt.savefig('human_algorithm/plots/human_algorithm_results.png')
+plt.xlabel('Hallux')
+plt.ylabel('Weight')
+plt.title('KNN Algorithm Training Results')
+plt.legend(title='Prediction')
+plt.savefig('ml_model/plots/knn_train_results.png')
+plt.close()
+
+
+
+test_df = x_test.copy()
+test_df['species'] = y_test
+test_df['pred'] = y_pred
+test_df['correct'] = test_df['pred'] == test_df['species']
+pred_wrong = test_df[test_df['correct'] == False]
+pred_correct = test_df[test_df['correct'] == True]
+
+# Plot the test data
+plt.scatter(
+    pred_correct['Hallux'],
+    pred_correct['Weight'],
+    c='green',
+    marker='o',
+    label='Correct',
+)
+plt.scatter(
+    pred_wrong['Hallux'],
+    pred_wrong['Weight'],
+    c='red',
+    marker='x',
+    label='Wrong',
+)
+
+plt.xlabel('Hallux')
+plt.ylabel('Weight')
+plt.title('KNN Algorithm Test Results')
+plt.legend(title='Prediction')
+plt.savefig('ml_model/plots/knn_test_results.png')
+plt.close()
