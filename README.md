@@ -33,7 +33,7 @@ Species
 - Hallux
 - Weight
 
-**[Video Review](https://)**
+**[Video Review (Does not exist yet)](https://)**
 
 ## Human Algorithm
 
@@ -74,7 +74,7 @@ The algorithm did not perform as expected when the input was near the line betwe
 
 These examples of success and failure highlight patterns in the data or limitations in my rules, such as how the hallux was a very good indicator of species.
 
-<img width="400" alt="image" src="/workspaces/Human-vs-ML-Project/human_algorithm/plots/human_algorithm_results.png" />
+<img width="400" alt="image" src="human_algorithm/plots/human_algorithm_results.png" />
 
 ## Machine Learning Model
 
@@ -100,4 +100,4 @@ The confusion matrix reveals that the model most often confuses coopers hawks, s
 
 Compared to the human algorithm, the KNN model is actually less accurate, but only slightly.
 
-<img width="400" alt="image" src="/workspaces/Human-vs-ML-Project/ml_model/plots/knn_test_results.png" />
+<img width="400" alt="image" src="ml_model/plots/knn_test_results.png" />
