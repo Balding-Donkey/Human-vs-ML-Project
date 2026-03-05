@@ -33,7 +33,7 @@ Species
 - Hallux
 - Weight
 
-**[Video Review (Does not exist yet)](https://)**
+**[Video Review](https://drive.google.com/file/d/1hHB5XfGkwTo4OE-SlZuGVKa_2-eV0Adv/view?usp=sharing)**
 
 ## Human Algorithm
 
@@ -93,8 +93,6 @@ Accuracy: 97.04%
 | CH | 7 | 1 | 2 |
 | RT | 0 | 85 | 1 |
 | SS | 0 | 0 | 39 |
-
-The table/visualization shows a clear pattern where the model predicts ___ when ___, indicating a strong relationship between these features.
 
 The confusion matrix reveals that the model most often confuses coopers hawks, suggesting this class may not follow patterns as strongly.
 
